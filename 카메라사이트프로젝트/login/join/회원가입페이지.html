@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../../material/공통스타일.css" type="text/css" rel="stylesheet" />
+
+    <script>
+        function move_login() {
+            window.location.href = "../login.html";
+        }
+
+    </script>
+    <script>
+        win = null;
+        function move() {
+            var n = document.getElementById("research");
+
+            if (n.value == "a700") {
+                window.location.href = "../../category/a700_info.html"
+            }
+            else if (n.value == "m100") {
+                window.location.href = "../../category/m100_info.html"
+            }
+            else if (n.value == "mark5") {
+
+                window.location.href = "../../category/마크5_info.html"
+            }
+            else if (n.value == "a9") {
+                window.location.href = "../../category/알파나인_info.html"
+            } else if (n.value == "hero6") {
+                window.location.href = "../../category/hero6_info.html"
+            }
+            else if (n.value == "d850") {
+                window.location.href = "../../category/D850_info.html"
+            }
+            else if (n.value == "g9x") {
+                window.location.href = "../../category/g9x_info.html"
+            }
+            else if (n.value == "rx100") {
+                window.location.href = "../../category/rx100_info.html"
+            }
+
+        }
+    </script>
+
+    <style>
+         #main_header {
+            width: 960px;
+            margin: 0 auto;
+            position: relative;
+            height: 250px;
+        }
+    
+        h1{
+            margin:30px 100px 0px 200px;
+            text-shadow:0px 0px 5px #ccc;
+        }
+        input[type=button]{
+        background:black;
+        border-radius:5px;
+        color:white;
+        border:1px solid black;
+        padding:2px;
+        }
+        input[type=text]{
+            
+            text-align:center;
+        
+        }
+    #content{
+        width:960px;
+        margin:10px auto 10px auto ;
+        color:black;
+        font:bold 100% "맑은 고딕",sans-serif;
+
+    }
+    
+    #content section{
+        float:left;
+        background-color:pink;
+        margin:30px 200px;
+        padding:40px auto;
+        text-align:right;
+    }
+    #content section form{
+        
+        padding:30px 80px;
+        margin:10px;
+        text-align:left;
+        border:2px dashed black;
+    }
+   
+    #content section form input{
+        margin:5px;
+    }
+    #content>section>input{
+        text-align:right;
+
+    }
+    
+    </style>
+
+
+</head>
+<body>
+    <header id="main_header">
+        <h3> 누구나 배울 수 있는</h3>
+        <input type="text" id="research" onchange="move();" />
+        <input type="button" value="검색" style="color:blue" onclick="move();" />
+        <a href="../../index_최해랑.html"><h1>카메라 사전</h1></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../../category/Category.html">제품 카테고리</a>
+                    <ol style="z-index:10">
+                        <li><a href='../../category/category_dslr.html'>DSLR</a></li>
+                        <li><a href='../../category/Category.html'>미러리스</a></li>
+                        <li><a href='../../category/category_compact.html'>컴팩트</a></li>
+                        <li><a href='../../category/category_actioncam.html'>액션캠 / 캠코더</a></li>
+                    </ol>
+
+                </li>
+
+                <li> <a href="../../dictionary/camera_info.html">카메라 용어사전</a></li>
+                <li><a href="../../recommend/site.html">추천 사이트</a></li>
+                <li><a href="../login.html">로그인</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <hr />
+    <h1>회원가입</h1>
+    <div id="content">
+        <section>
+            
+            <form name="회원가입" method="get">
+                이름: <input type="text" size="10" placeholder="강하나" /><br />
+                성별: <input type="radio" name="성별" value="1"/>여
+                      <input type="radio" name="성별" value="2" />남<br />
+
+                닉네임:<input type="text" size="10" placeholder="뿅뿅이"><br />
+                아이디:<input type="text" size="10" placeholder="gofkdvjvl" />
+                <input type="button" value="중복확인" onclick="alert('사용할 수 있는 아이디입니다.');" /><br />
+                비밀번호:<input type="text" size="10" placeholder="********" /><br />
+                비밀번호 확인:<input type="text" size="10" placeholder="********"  />
+                <input type="button" value="비밀번호 확인" onclick="alert('비밀번호가 설정되었습니다.');" /><br />
+                이메일:<input type="email" size="15" placeholder="gofkdvjvl@naver.com" />
+                <input type="button" value="이메일 인증" onclick="alert('인증되었습니다.');"/><br />
+
+            </form>
+            <input type="button" value="가입완료" onclick="alert('회원가입 되었습니다.\n로그인페이지로 이동합니다.'); move_login();" />
+        </section>
+    </div>
+
+
+
+</body>
+</html>
