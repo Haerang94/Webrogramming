@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+</head>
+<body>
+ <script>
+     var num1=parseInt(prompt("수 1은?",""));
+     var num2=parseInt(prompt("수 2는?",""));
+     var i=0, sum=0;
+     if (num1 < num2) {
+         for (i = num1; i <= num2; i++) {
+             sum += i;
+             if (i == num2) {
+                 document.write(i + "=" + sum);
+                 break;
+
+             } document.write(i + "+");
+
+         }
+     }
+     else {
+         for (i = num2; i <= num1; i++) {
+             sum += i;
+             if (i == num1) {
+                 document.write(i + "=" + sum);
+                 break;
+
+             }
+             document.write(i + "+");
+         }
+
+     }
+
+ </script>
+ 
+ 
+
+
+
+
+</body>
+</html>
