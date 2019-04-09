@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+</head>
+<body>
+<script>
+    var num=0;
+    while (true) {
+    num=parseInt(prompt("반복횟수를 입력해라",""));
+    if((num>=-10 && num<=-5) || (num>=5 && num<=10))
+    break;
+    else
+    alert("-5 ~ -10 또는 5~10사이의 수를 입력하세요");
+    }
+    var icon=prompt("반복할 문자를 입력하세요","");
+    if(num<0)num*=-1;
+    var i=0,j=0;
+    for (i = num; i >= 1; i--) {
+        for (j = i; j >= 1; j--) {
+            document.write(icon);
+        }
+        document.write("<br>");
+    }
+
+    </script>
+
+</body>
+</html>
