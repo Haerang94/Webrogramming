@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        
+        function showArr(ar) {
+            for (var i = 0; i < ar.length; i++) {
+                if (i!=0 && i % 10 == 0)document.write("<br>");
+                    document.write(ar[i] + " ");
+            }
+            document.write("<br>");
+        }
+
+
+        function randArrCreate() {
+             arr1 = new Array();
+             arr2 = new Array();
+            
+           
+            for (var i = 0; i < 20; i++) {
+                arr1.push(Math.floor(Math.random() * (500-10+1)) + 10);
+            }
+            
+
+            for (var i = 0; i < 30; i++) {
+                arr2.unshift(Math.floor(Math.random()*(500-10+1))+10);
+            }
+          
+            
+            for (var i = arr2.length-1; i >=0; i--) {
+                arr1.splice(10, 0, arr2[i]);
+            }
+           
+        }
+
+        function getMaxMin() {
+            showArr(arr1);
+            document.write("<Br>");
+            arr1.sort(function (a, b) { return b - a; });
+            document.write("Max: " + arr1[0]+", ");
+            arr1.sort(function (a, b) { return a - b; });
+            document.write("Min:" + arr1[0]);
+            
+            
+        }
+
+        function findVal() {
+            alert(arr1);
+            var ask = parseInt(prompt("찾고자 하는 수를 입력하세요.", ""));
+            showArr(arr1);
+
+            var temp = arr1.indexOf(ask, i);
+            document.write("<br>");
+            document.write("찾는 값 위치: ");
+            var count = 0;
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr1.indexOf(ask, i) == -1)
+                { count++; continue; }
+          
+                if (i > 0 && arr1.indexOf(ask, i) == temp) {
+                    count++; continue;
+                }
+
+               
+                document.write(arr1.indexOf(ask, i) + " ");
+                temp = arr1.indexOf(ask, i);
+            }
+            if (count == arr1.length) {
+                document.write("찾는 값이 없습니다.");
+            }
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <fieldset>
+        <legend>
+            배열함수 다루기
+        </legend>
+        <input type="button" value="랜덤배열생성" onclick="randArrCreate();"/><br />
+        <input type="button" value="최대최소" onclick="getMaxMin();" />
+        <input type="button" value="원소찾기" onclick="findVal();" />
+
+    </fieldset>
+</body>
+</html>
